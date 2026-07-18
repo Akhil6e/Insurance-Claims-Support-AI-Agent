@@ -1,0 +1,41 @@
+Insurance Claims Copilot: Exact Metrics Results
+Below are the exact numbers and results from the successful metrics run for each of the 10 measured parameters.
+
+1. Measure Retrieval Speed
+Result: PASS
+Metric: Mean latency was 0.0265 seconds (26.5 ms) per RAG memory query.
+(Threshold: < 5.0 seconds per query)
+2. Measure Total Response Time
+Result: PASS
+Metric: End-to-end response time was 2.0592 seconds (0.0035s ticket creation + 2.0557s LLM draft generation).
+(Threshold: < 60 seconds total)
+3. Measure Number of Documents
+Result: PASS
+Metric: 9 knowledge base source files indexed into 14 vector chunks. The database processed 27 total support tickets.
+4. Measure Retrieval Accuracy
+Result: PASS
+Metric: 75.0% keyword relevance score across all test queries (testing for items like required documents and fraud indicators).
+(Threshold: >= 30% keyword match)
+5. Measure Manual vs AI Time
+Result: PASS
+Metric: Estimated human time is 50 minutes vs AI time of 5.19 minutes (including human review). This resulted in 44.8 minutes saved (89.6% time savings) per claim, representing a 9.6x speedup.
+(Threshold: > 50% time savings)
+6. Measure Memory Performance
+Result: PASS
+Metric: Memory interactions were exceptionally fast. Memory save took 0.0539 seconds, and semantic memory search recall took 0.0066 seconds (6.6 ms).
+(Threshold: < 5.0 seconds search latency)
+7. Measure Deployment
+Result: PASS
+Metric: API health endpoint responded with HTTP 200 OK and a latency of 0.0039 seconds (3.9 ms).
+8. Measure API Performance
+Result: PASS
+Metric: Across all 6 endpoints tested, the mean response latency was 0.1298 seconds with a 100% success rate (no 5xx errors).
+(Threshold: All endpoints return success)
+9. Measure Throughput
+Result: PASS
+Metric: The system successfully handled 20 concurrent requests across 10 threads, achieving a throughput of 202.71 requests per second with 0 failures and a p95 latency of 0.0858 seconds.
+(Threshold: > 1 req/sec, 0 failures)
+10. Evaluate LLM Output Quality
+Result: PASS
+Metric: The LLM draft output achieved an 88% Quality Score (passing 7 out of 8 heuristic checks for professional tone, length, action items, formatting, and lack of hallucinations/placeholders).
+(Threshold: >= 60% quality checks pass)

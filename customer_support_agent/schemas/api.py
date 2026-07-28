@@ -4,7 +4,7 @@ from pydantic import BaseModel,EmailStr,Field
 
 class TicketCreateRequest(BaseModel):
     customer_email:EmailStr
-    customer_name:str
+    customer_name:str | None=None
     customer_company:str | None=None
     description:str = Field(min_length=10)
     subject:str = Field(min_length=3)
@@ -15,7 +15,7 @@ class TicketResponse(BaseModel):
     id:int
     customer_id:int
     customer_email:EmailStr
-    customer_name:str
+    customer_name:str | None=None
     customer_company:str | None=None
     description:str
     subject:str

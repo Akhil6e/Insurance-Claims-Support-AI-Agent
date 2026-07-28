@@ -1,0 +1,142 @@
+
+================================================================================
+  INSURANCE CLAIMS COPILOT — METRICS EVALUATION REPORT
+  Generated: 2026-07-18T17:12:49.651821
+  API Target: http://localhost:8000
+  Total Evaluation Time: 66.90s
+================================================================================
+
+────────────────────────────────────────────────────────────────────────────────
+   1. ✅  Retrieval Speed
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      mean_latency_sec              : 0.0265
+      min_latency_sec               : 0.0019
+      max_latency_sec               : 0.0998
+      median_latency_sec            : 0.0021
+      num_queries                   : 4
+      ingest_time_sec               : 0.7241
+      chunks_indexed                : 14
+      threshold                     : < 5.0s per query
+
+────────────────────────────────────────────────────────────────────────────────
+   2. ✅  Total Response Time
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      total_time_sec                : 2.0592
+      ticket_creation_sec           : 0.0035
+      draft_generation_sec          : 2.0557
+      draft_length_chars            : 891
+      memory_hits                   : 0
+      knowledge_hits                : 4
+      tool_calls                    : 2
+      threshold                     : < 60s total
+
+────────────────────────────────────────────────────────────────────────────────
+   3. ✅  Number of Documents
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      kb_source_files               : 9
+      kb_chunks_indexed             : 14
+      kb_collection_total           : 14
+      kb_local_files                : 9
+      kb_file_list                  : 9 files
+      total_tickets                 : 27
+      ticket_statuses               : {'open': 26, 'resolved': 1}
+      ticket_priorities             : {'medium': 11, 'low': 10, 'urgent': 3, 'high': 3}
+
+────────────────────────────────────────────────────────────────────────────────
+   4. ✅  Retrieval Accuracy
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      average_relevance_score       : 0.7500
+      num_test_cases                : 4
+      per_query_scores              : 4 queries evaluated
+      threshold                     : >= 30% keyword match
+
+────────────────────────────────────────────────────────────────────────────────
+   5. ✅  Manual vs AI Time
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      human_estimated_minutes       : 50
+      human_research_min            : 25
+      human_drafting_min            : 15
+      human_review_min              : 10
+      ai_generation_sec             : 11.6117
+      ai_generation_min             : 0.1900
+      ai_plus_review_min            : 5.1900
+      time_saved_min                : 44.8100
+      time_saved_pct                : 89.6%
+      speedup_factor                : 9.6x
+      threshold                     : > 50% time savings
+
+────────────────────────────────────────────────────────────────────────────────
+   6. ✅  Memory Performance
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      draft_generation_sec          : 19.8685
+      memory_save_sec               : 0.0539
+      memory_search_sec             : 0.0066
+      memory_list_sec               : 0.0126
+      memories_found_search         : 1
+      memories_found_list           : 1
+      threshold                     : < 5.0s search latency
+
+────────────────────────────────────────────────────────────────────────────────
+   7. ✅  Deployment
+────────────────────────────────────────────────────────────────────────────────
+      health_endpoint_status        : 200
+      health_response               : {'status': 'ok'}
+      health_latency_sec            : 0.0039
+      api_reachable                 : True
+      docker_status                 : No running containers or Docker not available
+      docker_compose_active         : False
+      status                        : PASS
+
+────────────────────────────────────────────────────────────────────────────────
+   8. ✅  API Performance
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      endpoints_tested              : 6
+      all_successful                : True
+      mean_latency_sec              : 0.1298
+      max_latency_sec               : 0.7521
+      min_latency_sec               : 0.0017
+      per_endpoint                  : 6 endpoints tested
+      threshold                     : All endpoints return success status
+
+────────────────────────────────────────────────────────────────────────────────
+   9. ✅  Throughput
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      total_requests                : 20
+      concurrency                   : 10
+      successful                    : 20
+      failed                        : 0
+      total_time_sec                : 0.0987
+      requests_per_sec              : 202.7100
+      mean_latency_sec              : 0.0456
+      p95_latency_sec               : 0.0858
+      max_latency_sec               : 0.0858
+      threshold                     : > 1 req/s, 0 failures
+
+────────────────────────────────────────────────────────────────────────────────
+  10. ✅  LLM Output Quality
+────────────────────────────────────────────────────────────────────────────────
+      status                        : PASS
+      quality_score                 : 88%
+      checks_passed                 : 7/8
+      word_count                    : 111
+      char_count                    : 724
+      check_details                 : {'min_length_100_chars': True, 'has_greeting': False, 'references_claim': True, 'has_action_items': True, 'professional_tone': True, 'reasonable_length': True, 'no_placeholder_text': True, 'structured_format': True}
+      draft_preview                 : Based on the provided information, the claim type is Comprehensive, which covers non-collision losses such as windstorm damage. The estimated loss amount is $15,000.00, which is above the typical deductible threshold.
+
+To proceed, we need to confirm the policy details and coverage. Please verify the...
+      context_memory_hits           : 0
+      context_kb_hits               : 4
+      context_tool_calls            : 1
+      threshold                     : >= 60% quality checks pass
+
+================================================================================
+  OVERALL: 10/10 metrics passed
+================================================================================

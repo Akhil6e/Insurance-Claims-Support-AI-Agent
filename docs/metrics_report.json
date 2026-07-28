@@ -1,0 +1,140 @@
+{
+  "Retrieval Speed": {
+    "timestamp": "2026-07-18T17:11:43.588638",
+    "status": "PASS",
+    "mean_latency_sec": 0.026483156281756237,
+    "min_latency_sec": 0.0018722920212894678,
+    "max_latency_sec": 0.09980487509164959,
+    "median_latency_sec": 0.0021277290070429444,
+    "num_queries": 4,
+    "ingest_time_sec": 0.7241332919802517,
+    "chunks_indexed": 14,
+    "threshold": "< 5.0s per query"
+  },
+  "Total Response Time": {
+    "timestamp": "2026-07-18T17:11:45.647978",
+    "status": "PASS",
+    "total_time_sec": 2.0591580838663504,
+    "ticket_creation_sec": 0.0034817499108612537,
+    "draft_generation_sec": 2.055676333955489,
+    "draft_length_chars": 891,
+    "memory_hits": 0,
+    "knowledge_hits": 4,
+    "tool_calls": 2,
+    "threshold": "< 60s total"
+  },
+  "Number of Documents": {
+    "timestamp": "2026-07-18T17:11:46.064668",
+    "status": "PASS",
+    "kb_source_files": 9,
+    "kb_chunks_indexed": 14,
+    "kb_collection_total": 14,
+    "kb_local_files": 9,
+    "kb_file_list": "9 files",
+    "total_tickets": 27,
+    "ticket_statuses": {
+      "open": 26,
+      "resolved": 1
+    },
+    "ticket_priorities": {
+      "medium": 11,
+      "low": 10,
+      "urgent": 3,
+      "high": 3
+    }
+  },
+  "Retrieval Accuracy": {
+    "timestamp": "2026-07-18T17:11:47.533186",
+    "status": "PASS",
+    "average_relevance_score": 0.75,
+    "num_test_cases": 4,
+    "per_query_scores": "4 queries evaluated",
+    "threshold": ">= 30% keyword match"
+  },
+  "Manual vs AI Time": {
+    "timestamp": "2026-07-18T17:11:59.145067",
+    "status": "PASS",
+    "human_estimated_minutes": 50,
+    "human_research_min": 25,
+    "human_drafting_min": 15,
+    "human_review_min": 10,
+    "ai_generation_sec": 11.611715167178772,
+    "ai_generation_min": 0.19,
+    "ai_plus_review_min": 5.19,
+    "time_saved_min": 44.81,
+    "time_saved_pct": "89.6%",
+    "speedup_factor": "9.6x",
+    "threshold": "> 50% time savings"
+  },
+  "Memory Performance": {
+    "timestamp": "2026-07-18T17:12:19.097604",
+    "status": "PASS",
+    "draft_generation_sec": 19.86850658408366,
+    "memory_save_sec": 0.05390983307734132,
+    "memory_search_sec": 0.006594958947971463,
+    "memory_list_sec": 0.012590334052219987,
+    "memories_found_search": 1,
+    "memories_found_list": 1,
+    "threshold": "< 5.0s search latency"
+  },
+  "Deployment": {
+    "timestamp": "2026-07-18T17:12:20.903884",
+    "health_endpoint_status": 200,
+    "health_response": {
+      "status": "ok"
+    },
+    "health_latency_sec": 0.003910082974471152,
+    "api_reachable": true,
+    "docker_status": "No running containers or Docker not available",
+    "docker_compose_active": false,
+    "status": "PASS"
+  },
+  "API Performance": {
+    "timestamp": "2026-07-18T17:12:21.683897",
+    "status": "PASS",
+    "endpoints_tested": 6,
+    "all_successful": true,
+    "mean_latency_sec": 0.12985,
+    "max_latency_sec": 0.7521,
+    "min_latency_sec": 0.0017,
+    "per_endpoint": "6 endpoints tested",
+    "threshold": "All endpoints return success status"
+  },
+  "Throughput": {
+    "timestamp": "2026-07-18T17:12:21.782737",
+    "status": "PASS",
+    "total_requests": 20,
+    "concurrency": 10,
+    "successful": 20,
+    "failed": 0,
+    "total_time_sec": 0.0987,
+    "requests_per_sec": 202.71,
+    "mean_latency_sec": 0.0456,
+    "p95_latency_sec": 0.0858,
+    "max_latency_sec": 0.0858,
+    "threshold": "> 1 req/s, 0 failures"
+  },
+  "LLM Output Quality": {
+    "timestamp": "2026-07-18T17:12:49.651546",
+    "status": "PASS",
+    "quality_score": "88%",
+    "checks_passed": "7/8",
+    "word_count": 111,
+    "char_count": 724,
+    "check_details": {
+      "min_length_100_chars": true,
+      "has_greeting": false,
+      "references_claim": true,
+      "has_action_items": true,
+      "professional_tone": true,
+      "reasonable_length": true,
+      "no_placeholder_text": true,
+      "structured_format": true
+    },
+    "draft_preview": "Based on the provided information, the claim type is Comprehensive, which covers non-collision losses such as windstorm damage. The estimated loss amount is $15,000.00, which is above the typical deductible threshold.\n\nTo proceed, we need to confirm the policy details and coverage. Please verify the...",
+    "context_memory_hits": 0,
+    "context_kb_hits": 4,
+    "context_tool_calls": 1,
+    "threshold": ">= 60% quality checks pass"
+  }
+}

@@ -32,7 +32,6 @@ Final decisions always remain with the human reviewer.
 - ⚡ FastAPI REST Backend
 - 🗄️ SQLite Database
 - 🐳 Docker & Docker Compose Support
-- ☁️ Ready for AWS EC2 Deployment
 - ✅ GitHub Actions & Pytest Integration
 
 ---
@@ -142,7 +141,6 @@ Final decisions always remain with the human reviewer.
 - Docker
 - Docker Compose
 - GitHub Actions
-- AWS EC2
 - uv
 
 ---
